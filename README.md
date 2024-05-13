@@ -136,7 +136,7 @@ To create the databricks cluster, manually create the cluster at the 'Compute' s
 In the [Notebooks folder](/notebooks) there are 3 files:
 * The [original notebook](/notebooks/ML_End_to_End_Example.dbc), which can be uploaded as a source to the Azure Databricks portal.
 * The [solved notebook](/notebooks/ML_End_to_End_Example_solved.dbc), which contains the result of the runs and the visualizations. This can be viewed after uploading to the Azure Databricks portal.
-* The [solved notebook as HTML version](https://devtpc.github.io/Spark03-ML/notebooks/ml_end_to_end_examlpe_solved.html), which can be viewed in the browser directly, without using Databricks.
+* The [solved notebook as HTML version](https://devtpc.github.io/Spark03-ML/notebooks/ml_end_to_end_example_solved.html), which can be viewed in the browser directly, without using Databricks.
 
 To run the app, upload one of the first two notebooks to the Databricks account, and run it cell-by-cell.
 
@@ -209,7 +209,7 @@ This code runs pretty slow, as it sweeps through 96 different evaluations. Howev
 
 > [!NOTE]
 > The result best AUC is 0.923, which is better than the baseline model. According to the original task, the AUC should be 0.91 (or as per the charts, 0.9147), meaning better than the baseline model, however a bit worse, than our model calculated. This diversion from the original example is a bit unexpected, especially, that although the modelling uses randomization, we are using a seed.
-> However, it is a very possible explanation, that something was changed in the xgboost model's implementation, or in those default values, which our model does not exactly set, and in which it relies on the default values. Accoording to the introductury part of the notebook, it was designed when 7.3 LTS ML runtime was widespread. Nowadays 9.1 LTS ML version is the oldest, which can be choosen in a Databricks cluster. As our result is better than the original one, it should not bother us.
+> However, it is a very possible explanation, that something was changed in the xgboost model's implementation, or in those default values, which our model does not exactly set, and in which it relies on the default values. According to the introductury part of the notebook, it was designed when 7.3 LTS ML runtime was widespread. Nowadays 9.1 LTS ML version is the oldest, which can be choosen in a Databricks cluster. As our result is better than the original one, it should not bother us.
 
 From the experiments page we can compare the best resulting models and their hyperparameters:
 
@@ -252,7 +252,7 @@ new_data = new_data.withColumn(
 ```
 As it can be seen on the image, the model created prediction values between 0 and 1. Generally 50% can be used as a divider between the "final" 0 or 1 decision, however, when the cost of false negative and false positive largely differs, the threshold can be set differently.
 
-![Prediction](/screenshots/img_prediction.pngg)
+![Prediction](/screenshots/img_prediction.png)
 
 ### Model serving for low-latency requests
 
